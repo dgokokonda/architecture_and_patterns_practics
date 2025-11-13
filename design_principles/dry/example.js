@@ -52,3 +52,37 @@ function updateUser(userData) {
   validateUserData(userData);
   // ...
 }
+
+// Example #2
+// Bad:
+const printOdd = (array) => {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] % 2 !== 0) {
+      console.log(array[i]);
+    }
+  }
+};
+
+const printEven = (array) => {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] % 2 === 0) {
+      console.log(array[i]);
+    }
+  }
+};
+
+printOdd([1, 2, 3, 4, 5]);
+printEven([1, 2, 3, 4, 5]);
+
+// Good:
+const printNumbers = (array, cb) => {
+  for (let i = 0; i < array.length; i++) {
+    if (cb(array[i])) {
+      console.log(array[i]);
+    }
+  }
+};
+
+printNumbers([1, 2, 3, 4], (x) => x % 2 !== 0); // odd numbers
+
+printNumbers([1, 2, 3, 4], (x) => x % 2 === 0); // even numbers
