@@ -71,7 +71,20 @@ function HomePage() {
 function PeoplePage() {
   return (
     <div className="page-container">
-      <div id="people-app"></div>
+      <h2>People Microfrontend</h2>
+      {/* Контейнер для монтирования микрофронтенда */}
+      <div 
+        id="people-container" 
+        style={{ 
+          minHeight: '400px',
+          border: '1px solid #ddd',
+          borderRadius: '8px',
+          padding: '20px',
+          marginTop: '20px'
+        }}
+      >
+        <div id="people-app"></div>
+      </div>
     </div>
   );
 }
@@ -79,7 +92,19 @@ function PeoplePage() {
 function AnimalsPage() {
   return (
     <div className="page-container">
-      <div id="animals-app"></div>
+      <h2>Animals Microfrontend</h2>
+      <div 
+        id="animals-container"
+        style={{ 
+          minHeight: '400px',
+          border: '1px solid #ddd',
+          borderRadius: '8px',
+          padding: '20px',
+          marginTop: '20px'
+        }}
+      >
+        <div id="animals-app"></div>
+      </div>
     </div>
   );
 }
