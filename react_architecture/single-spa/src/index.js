@@ -1,3 +1,4 @@
+// этот файл не нужен при single-spa, но без него не работает, по крайней мере не получается настроить запуск без него или с иным содержанием
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
