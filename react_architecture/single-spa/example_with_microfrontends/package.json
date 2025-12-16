@@ -1,0 +1,18 @@
+{
+  "name": "single-spa-example",
+  "version": "1.0.0",
+  "description": "Single-spa example with multiple microfrontends",
+  "private": true,
+  "scripts": {
+    "start": "concurrently \"npm run start:root\" \"npm run start:api\" \"npm run start:people\" \"npm run start:animals\" \"npm run start:styleguide\"",
+    "start:root": "cd root-config && npm start",
+    "start:api": "cd api && npm start",
+    "start:people": "cd people && npm start",
+    "start:animals": "cd animals && npm start",
+    "start:styleguide": "cd styleguide && npm start",
+    "install:all": "npm install && cd root-config && npm install && cd ../api && npm install && cd ../people && npm install && cd ../animals && npm install && cd ../styleguide && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
