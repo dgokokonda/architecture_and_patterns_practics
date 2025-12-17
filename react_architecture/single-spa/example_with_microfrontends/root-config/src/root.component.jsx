@@ -17,6 +17,7 @@ export default function Root(props) {
             <Route path="/" element={<HomePage />} />
             <Route path="/people" element={<PeoplePage />} />
             <Route path="/animals" element={<AnimalsPage />} />
+            <Route path="/todolist" element={<TodolistPage />} />
           </Routes>
         </main>
       </div>
@@ -52,6 +53,12 @@ function Navbar() {
           className={`nav-link ${isActive("/animals") ? "active" : ""}`}
         >
           Animals
+        </Link>
+        <Link
+          to="/todolist"
+          className={`nav-link ${isActive("/todolist") ? "active" : ""}`}
+        >
+          Todolist
         </Link>
       </div>
     </nav>
@@ -104,6 +111,27 @@ function AnimalsPage() {
         }}
       >
         <div id="animals-app"></div>
+      </div>
+    </div>
+  );
+}
+
+
+function TodolistPage() {
+  return (
+    <div className="page-container">
+      <h2>Todolist Microfrontend</h2>
+      <div 
+        id="todolist-container"
+        style={{ 
+          minHeight: '400px',
+          border: '1px solid #ddd',
+          borderRadius: '8px',
+          padding: '20px',
+          marginTop: '20px'
+        }}
+      >
+        <div id="todolist-app"></div>
       </div>
     </div>
   );

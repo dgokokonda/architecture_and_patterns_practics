@@ -158,6 +158,41 @@ body {
   color: #666;
 }
 
+/* Animals Styles */
+.todolist-container {
+  width: 100%;
+}
+
+.todolist {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.todo-card {
+  background-color: #e8f5e9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #c8e6c9;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.todo-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.todo-card h3 {
+  color: #2e7d32;
+  margin-bottom: 0.5rem;
+}
+
+.todo-card p {
+  margin: 0.5rem 0;
+  color: #666;
+}
+
 /* Loading and Error States */
 .loading {
   text-align: center;
@@ -211,7 +246,8 @@ body {
   }
 
   .people-list,
-  .animals-list {
+  .animals-list,
+  .todolist {
     grid-template-columns: 1fr;
   }
 }

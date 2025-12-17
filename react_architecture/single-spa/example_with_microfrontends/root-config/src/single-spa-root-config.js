@@ -28,6 +28,12 @@ registerApplication({
   activeWhen: (location) => location.pathname === "/animals",
 });
 
+registerApplication({
+  name: "@single-spa-example/todolist",
+  app: () => System.import("@single-spa-example/todolist"),
+  activeWhen: (location) => location.pathname === "/todolist",
+});
+
 start({
   urlRerouteOnly: true,
 });

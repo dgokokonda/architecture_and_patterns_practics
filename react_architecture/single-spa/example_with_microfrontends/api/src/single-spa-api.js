@@ -18,6 +18,14 @@ class ApiService {
       { id: 4, name: "Дельфин", type: "Хищник", habitat: "Океан" },
       { id: 5, name: "Кенгуру", type: "Травоядное", habitat: "Пустыня" },
     ];
+
+    this.todoList = [
+      { id: 1, name: "Wake up", datetime: '17.12.2025 07:00', done: true },
+      { id: 2, name: "Make coffee", datetime: '17.12.2025 07:30', done: true },
+      { id: 3, name: "Go to work", datetime: '17.12.2025 08:00', done: true },
+      { id: 4, name: "Buy products", datetime: '17.12.2025 18:00', done: true },
+      { id: 5, name: "Go sleep", datetime: '17.12.2025 23:00', done: false },
+    ]
   }
 
   async getPeople() {
@@ -56,7 +64,26 @@ class ApiService {
       }, 200);
     });
   }
+
+  async getTodos() {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve({ data: this.todoList })
+      }, 300)
+    })
+  }
+
+  async getTodo(id) {
+    return new Propmise((resolve) => {
+      setTimeout(() => {
+        const todo = this.todoList.find(todo => todo.id === id)
+        resolve({ data: todo })
+      }, 200)
+    })
+  }
 }
+
+
 
 // Export API service as a global service
 window.apiService = new ApiService();

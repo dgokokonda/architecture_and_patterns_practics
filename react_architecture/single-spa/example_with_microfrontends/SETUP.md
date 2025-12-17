@@ -54,6 +54,13 @@ npm install
 npm start
 ```
 
+### Терминал 6 - Todolist
+```bash
+cd todolist
+npm install
+npm start
+```
+
 ## Порты приложений
 
 - **root-config**: http://localhost:9000
@@ -61,6 +68,7 @@ npm start
 - **people**: http://localhost:9002
 - **animals**: http://localhost:9003
 - **styleguide**: http://localhost:9004
+- **todolist**: http://localhost:9005
 
 ## Возможные проблемы
 
@@ -82,6 +90,7 @@ single-spa-example/
 ├── people/           # People микро-приложение (порт 9002)
 ├── animals/          # Animals микро-приложение (порт 9003)
 ├── styleguide/       # Стили (порт 9004)
+├── todolist/          # Todolist микро-приложение (порт 9005)
 ├── package.json      # Корневой package.json
 └── README.md         # Документация
 ```
