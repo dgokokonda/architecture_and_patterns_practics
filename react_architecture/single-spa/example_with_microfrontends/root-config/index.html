@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="data:,">
+  <title>Single-SPA Example</title>
+  <script type="systemjs-importmap">
+      {
+        "imports": {
+          "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@6.0.0/lib/es2015/system/single-spa.min.js",
+          "react": "https://cdn.jsdelivr.net/npm/react@18/umd/react.development.js",
+          "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@18/umd/react-dom.development.js",
+          "@single-spa-example/root-config": "http://localhost:9000/single-spa-root-config.js",
+          "@single-spa-example/api": "http://localhost:9001/single-spa-api.js",
+          "@single-spa-example/people": "http://localhost:9002/single-spa-people.js",
+          "@single-spa-example/animals": "http://localhost:9003/single-spa-animals.js",
+          "@single-spa-example/todolist": "http://localhost:9005/single-spa-todolist.js",
+          "@single-spa-example/styleguide": "http://localhost:9004/single-spa-styleguide.js"
+        }
+      }
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs@6/dist/system.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs@6/dist/extras/amd.min.js"></script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script>
+    System.import("@single-spa-example/root-config");
+  </script>
+</body>
+
+</html>
