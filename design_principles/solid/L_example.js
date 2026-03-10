@@ -35,6 +35,7 @@ class PersonFromAnotherCompany extends Guest {
   }
 }
 
+// реализация принципа через НОС
 function noAccess(person) {
   person.access();
 }
