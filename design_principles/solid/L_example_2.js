@@ -49,3 +49,25 @@ function renderComponent(component) {
 renderComponent(new Header());
 renderComponent(new Footer());
 // renderComponent(new HOC())
+
+// ==========================================
+// <!-- Вью пример -->
+<script setup>
+// Базовый компонент (абстракция)
+const BaseButton = {
+  props: ['label', 'disabled'],
+  template: `<button :disabled="disabled">{{ label }}</button>`
+}
+
+// Наследники могут расширять, но не ломают поведение
+const PrimaryButton = {
+  ...BaseButton,
+  template: `<button class="primary" :disabled="disabled">{{ label }}</button>`
+}
+
+const IconButton = {
+  ...BaseButton,
+  props: ['label', 'icon'],
+  template: `<button :disabled="disabled"><i :class="icon"></i> {{ label }}</button>`
+}
+</script>
