@@ -41,6 +41,7 @@ class HOC extends ComponentWithoutTemplate {
   }
 }
 
+// реализация принципа через НОС
 function renderComponent(component) {
   component.render();
 }
