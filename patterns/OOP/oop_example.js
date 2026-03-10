@@ -150,7 +150,7 @@ const alien1 = new Alien("Ali", "I'm Ali the alien!", 10)
 // Полиморфизм:
 alien1.attack() // вывод: "Now I'm doing a different thing, HA!"
 enemy.attack() // Вывод: I'm attacking with a power of 3!
-----------------------------------------------------------------
+// ----------------------------------------------------------------
   // Вариант 2:
   // Базовый класс
 abstract class Animal {
