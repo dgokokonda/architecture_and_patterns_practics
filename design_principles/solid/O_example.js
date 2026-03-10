@@ -65,3 +65,21 @@ class AreaCalculator {
 // расширяем
 const calc = new AreaCalculator([new Square(3), new Circle(4), new Circle(5)]);
 console.log(calc.sum());
+// ===================================
+// Вью пример
+<!-- Компонент открыт для расширения через слоты -->
+<template>
+  <div class="card">
+    <header><slot name="header" /></header>
+    <main><slot /></main>
+    <footer><slot name="footer" /></footer>
+  </div>
+</template>
+
+<!-- Использование - расширяем без изменения компонента -->
+<Card>
+  <template #header>
+    <h2>{{ title }}</h2>
+  </template>
+  <p>Контент карточки</p>
+</Card>
