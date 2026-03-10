@@ -17,7 +17,7 @@ class Square extends Shape {
   }
 
   area() {
-    this.size ** 2;
+    return this.size ** 2;
   }
 }
 
