@@ -49,3 +49,10 @@ class Database {
 const db1 = Database.getInstance({ users: [] });
 const db2 = Database.getInstance();
 console.log(db1 === db2); // true - один экземпляр
+
+// Вью пример
+// 1. Хранилище состояния (Pinia/Vuex)
+const useUserStore = defineStore('user', {
+  state: () => ({ user: null })
+}) // По сути синглтон
+
